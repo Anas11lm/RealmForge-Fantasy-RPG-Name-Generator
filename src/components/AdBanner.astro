@@ -1,0 +1,39 @@
+---
+export interface Props {
+  slotId?: string;
+  format?: 'horizontal-banner' | 'sidebar' | 'mobile-anchor';
+  class?: string;
+}
+
+const {
+  slotId = 'default-ad-slot',
+  format = 'horizontal-banner',
+  class: className = '',
+} = Astro.props;
+
+const formatClasses = {
+  'horizontal-banner': 'w-full min-h-[60px] sm:min-h-[90px] md:min-h-[100px] max-w-4xl mx-auto my-6 sm:my-8',
+  'sidebar': 'w-full min-h-[250px] lg:min-h-[300px] my-4 sm:my-6',
+  'mobile-anchor': 'w-full min-h-[50px] sm:min-h-[60px] max-w-lg mx-auto my-3 sm:my-4',
+}[format];
+---
+
+<div
+  class={`relative rounded-xl border border-dashed border-white/10 bg-[#090d15]/60 flex flex-col items-center justify-center p-3 overflow-hidden select-none ${formatClasses} ${className}`}
+  data-ad-slot={slotId}
+  data-ad-format={format}
+  aria-label="Advertisement container"
+>
+  <span class="text-[10px] font-mono tracking-widest uppercase text-slate-500 mb-1">
+    Advertisement
+  </span>
+  <div class="w-full h-full flex flex-col items-center justify-center text-center">
+    <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent mb-2"></div>
+    <span class="text-xs text-slate-400 font-mono">
+      AdSense Container [{format}]
+    </span>
+    <span class="text-[10px] text-slate-500 font-mono mt-0.5">
+      Zero-CLS Fixed Geometry · Slot #{slotId}
+    </span>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+# Google, Bing, DuckDuckGo & standard crawlers
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://realmforge.app/sitemap.xml

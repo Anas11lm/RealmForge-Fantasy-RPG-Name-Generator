@@ -1,0 +1,72 @@
+{
+  "id": "dwarf-names",
+  "slug": "dwarf-names",
+  "category": "fantasy-races",
+  "categoryName": "Fantasy Races",
+  "type": "dwarves",
+  "title": "Dwarf Name Generator",
+  "metaTitle": "Dwarf Name Generator – Mighty Mountain & Clan Names for D&D / RPG",
+  "metaDescription": "Generate rugged, thunderous Dwarven names for warriors, runepriests, and clan elders. Features authentic Old Norse and subterranean phonetics with clan titles.",
+  "heroSubtitle": "Forge unyielding, guttural names hammered from volcanic stone, runic iron, and ancient mountain halls.",
+  "namingConventions": {
+    "summary": "Dwarven naming traditions are deeply tied to ancestral honor, metallurgy, and bedrock stone. A dwarf never speaks their true birth name lightly, reserving it for clan genealogies inscribed upon personal runic amulets.",
+    "phonetics": "Dwarven phonetics favor plosives ('b', 'd', 'g', 'k', 't') and rolling velar sounds ('gr', 'br', 'dr', 'th'). Suffixes frequently echo heavy hammer falls on anvils, utilizing endings like '-in', '-or', '-mund', and '-grim'.",
+    "surnames": "Clan names describe ancestral deeds, metallurgy, or geographic strongholds. Compound titles like Stonebreaker, Forgehammer, and Ironfoot serve as badges of clan fidelity and generational craft guilds."
+  },
+  "notableNames": [
+    {
+      "name": "Thorin Stonebreaker",
+      "meaning": "Thunderous Breaker of Granite",
+      "origin": "Citadel of Karak-Dum",
+      "significance": "Legendary king who cleared the underground tunnel networks of deep-trolls."
+    },
+    {
+      "name": "Dis Forgehammer",
+      "meaning": "Shield Maiden of the Red Hearth",
+      "origin": "Anvil-Spire Foundry",
+      "significance": "Master smith who invented Damascus rune-steel during the Great Siege."
+    },
+    {
+      "name": "Gimli Ironfoot",
+      "meaning": "Resolute Walker of the Deep Trenches",
+      "origin": "Misty Crag Bastion",
+      "significance": "Famed warrior noted for endurance during the subterranean war of the three crowns."
+    },
+    {
+      "name": "Helga Deepdelver",
+      "meaning": "Seeker of the Primordial Veins",
+      "origin": "Obsidian Chasm Prospectors",
+      "significance": "Pioneer miner who discovered the legendary Heartstone crystal deposit."
+    },
+    {
+      "name": "Balin Goldvein",
+      "meaning": "Keeper of the Vaulted Gold",
+      "origin": "High Throne of Mor-Thrum",
+      "significance": "Diplomat and chronicler whose ledgers preserved four centuries of guild treaties."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How are female dwarf names different from male dwarf names?",
+      "answer": "While female dwarf names retain the strong consonants of their mountain heritage, they often feature vocalic endings like '-a', '-dis', '-mira', '-run', or '-hild', reflecting maternal guardians of the hearth and ancient rune-weavers."
+    },
+    {
+      "question": "What is the role of a Dwarven Clan title?",
+      "answer": "A clan surname is an inherited responsibility. If a dwarf brings shame to their hall, they may be stripped of their clan name and known merely by a wanderer's epithet until their honor is restored by trial or combat."
+    },
+    {
+      "question": "Are these names based on Tolkien or Norse mythology?",
+      "answer": "Our algorithmic word banks synthesize both Old Norse edda roots (the historical source of modern fantasy dwarves) and tabletop RPG conventions from Dungeons & Dragons, Warhammer, and Pathfinder."
+    },
+    {
+      "question": "Can I save names across multiple sessions?",
+      "answer": "Yes. When you click the star or bookmark icon on any name, it is automatically stored in your browser's persistent LocalStorage and accessible via the floating Favorites drawer."
+    }
+  ],
+  "relatedSlugs": [
+    { "slug": "elf-names", "category": "fantasy-races", "title": "Elf Name Generator" },
+    { "slug": "orc-names", "category": "fantasy-races", "title": "Orc Name Generator" },
+    { "slug": "tavern-names", "category": "locations", "title": "Tavern & Inn Name Generator" },
+    { "slug": "dragon-names", "category": "creatures", "title": "Dragon Name Generator" }
+  ]
+}

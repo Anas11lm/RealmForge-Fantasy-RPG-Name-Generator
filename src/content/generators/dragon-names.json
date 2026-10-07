@@ -1,0 +1,72 @@
+{
+  "id": "dragon-names",
+  "slug": "dragon-names",
+  "category": "creatures",
+  "categoryName": "Monsters & Wyrms",
+  "type": "dragons",
+  "title": "Dragon Name Generator",
+  "metaTitle": "Dragon Name Generator – Ancient Wyrm, Drake & Draconic Monikers",
+  "metaDescription": "Generate ancient, terrifying Dragon names for your fantasy world. Features Draconic syllabic roots, legendary titles, and primordial breath epithets.",
+  "heroSubtitle": "Summon cataclysmic, primordial names fit for ancient gold dragons, shadow wyrms, and apocalyptic leviathans.",
+  "namingConventions": {
+    "summary": "Draconic names resonate with ancient thunder and rolling brimstone. In draconic lore, an ancient wyrm’s name lengthens with every century they slumber atop their hoards, absorbing the names of fallen kingdoms they have turned to ash.",
+    "phonetics": "Draconic syllables favor sharp sibilants ('x', 'z', 'th'), rolling draconic trills ('dr', 'vr', 'rh'), and volcanic gutturals ('khor', 'mor', 'ign'). Female dragons often possess flowing yet menacing vocalic inflections ('aurelia', 'vaelis', 'ignis').",
+    "surnames": "Rather than family surnames, dragons claim terrifying epic titles that describe the calamities they unleash, such as 'the Desolation of the North', 'the World-Eater', or 'Bringer of the Cinder Twilight'."
+  },
+  "notableNames": [
+    {
+      "name": "Ancalagon the World-Eater",
+      "meaning": "Brimstone Jaw of Primordial Ruin",
+      "origin": "First Age Magma Abyss",
+      "significance": "Monolithic black dragon whose wings darkened the sun across three continents."
+    },
+    {
+      "name": "Smaug the Golden",
+      "meaning": "The Tremendous and Unyielding Fire-Drake",
+      "origin": "The Lonely Mountain",
+      "significance": "Fierce dragon of the Third Age who claimed the dwarven kingdom of Erebor."
+    },
+    {
+      "name": "Vermithrax Pejorative",
+      "meaning": "Serpent of the Boiling Sulfuric Caldera",
+      "origin": "Crag of Ur",
+      "significance": "Four-hundred-year-old fiery wyrm revered by subterranean cults."
+    },
+    {
+      "name": "Vaelis the Cinder-Queen",
+      "meaning": "Emerald Sovereign of the Ashen Peak",
+      "origin": "Verdant Caldera Spires",
+      "significance": "Prismatic dragon who defended the elder forest against imperial iron legions."
+    },
+    {
+      "name": "Xyrax the Void-Wing",
+      "meaning": "Draconic Stalker of the Astral Rifts",
+      "origin": "The Deep Cosmos",
+      "significance": "Mystical star-wyrm said to consume dead astral echoes between dimensions."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I use these names for chromatic and metallic dragons in D&D?",
+      "answer": "Yes! The syllabic generator balances both fierce, predatory gutturals suitable for Red/Black dragons and melodic, noble roots suited for Gold, Silver, and Bronze dragons."
+    },
+    {
+      "question": "Do dragons use surnames?",
+      "answer": "True dragons typically do not share mortal clan names. Instead, they use earned epithets and titles based on the geographic desolation or divine feats they have wrought."
+    },
+    {
+      "question": "How many combinations are possible in this engine?",
+      "answer": "Our algorithmic engine combines over 60 prefixes, 20 middle syllables, 60 suffixes, and over 40 epic epithets, producing tens of thousands of unique draconic identities without duplicates."
+    },
+    {
+      "question": "Can I copy names to my clipboard on mobile?",
+      "answer": "Yes, tap the copy button next to any name for an instant clipboard copy and confirmation toast."
+    }
+  ],
+  "relatedSlugs": [
+    { "slug": "elf-names", "category": "fantasy-races", "title": "Elf Name Generator" },
+    { "slug": "dwarf-names", "category": "fantasy-races", "title": "Dwarf Name Generator" },
+    { "slug": "orc-names", "category": "fantasy-races", "title": "Orc Name Generator" },
+    { "slug": "tavern-names", "category": "locations", "title": "Tavern & Inn Name Generator" }
+  ]
+}

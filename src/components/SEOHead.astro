@@ -1,0 +1,63 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = 'Fantasy & RPG Name Generator — 100,000+ Lore-Friendly Names',
+  description = 'Generate endless unique, lore-friendly fantasy names for D&D 5e, Pathfinder, fantasy writing, and worldbuilding. 1-click copy & save your favorites.',
+  canonical,
+  ogImage = 'https://realmforge.app/og-image.png',
+  ogType = 'website',
+  noindex = false,
+} = Astro.props;
+
+// Normalizing canonical URL: strip query parameters, remove trailing slashes (except root)
+const siteOrigin = 'https://realmforge.app';
+const rawPath = canonical ? new URL(canonical, siteOrigin).pathname : Astro.url?.pathname || '/';
+const normalizedPath = rawPath === '/' ? '/' : rawPath.replace(/\/+$/, '');
+const absoluteCanonicalURL = `${siteOrigin}${normalizedPath}`;
+
+const robotsDirectives = noindex
+  ? 'noindex, nofollow'
+  : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+---
+
+<!-- Core Technical SEO Meta -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={absoluteCanonicalURL} />
+<meta name="robots" content={robotsDirectives} />
+<meta name="googlebot" content={robotsDirectives} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:site_name" content="RealmForge" />
+<meta property="og:type" content={ogType} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={absoluteCanonicalURL} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={title} />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@RealmForgeApp" />
+<meta name="twitter:creator" content="@RealmForgeApp" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={title} />
+
+<!-- Performance Resource Hints & Core Web Vitals (CWV) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+<meta name="theme-color" content="#080b11" />

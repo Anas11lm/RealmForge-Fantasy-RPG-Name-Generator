@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Generator } from '../../components/Generator.tsx';
+import AdBanner from '../../components/AdBanner.astro';
+
+import elfData from '../../content/generators/elf-names.json';
+import dwarfData from '../../content/generators/dwarf-names.json';
+import orcData from '../../content/generators/orc-names.json';
+import tavernData from '../../content/generators/tavern-names.json';
+import dragonData from '../../content/generators/dragon-names.json';
+
+export async function getStaticPaths() {
+  const generators = [elfData, dwarfData, orcData, tavernData, dragonData];
+
+  return generators.map((gen) => ({
+    params: {
+      category: gen.category,
+      slug: gen.slug,
+    },
+    props: { generator: gen },
+  }));
+}
+
+const { generator } = Astro.props;
+
+// High-CTR Title & User-Intent Meta Description
+const seoTitle = `${generator.title} — 1,000+ Lore-Friendly Names`;
+const seoDescription = `Generate endless unique, lore-friendly ${generator.title.replace(' Generator', '')} names for D&D 5e, Pathfinder, fantasy writing, and worldbuilding. 1-click copy & save your favorites.`;
+const canonicalURL = `https://realmforge.app/${generator.category}/${generator.slug}`;
+
+const breadcrumbs = [
+  { name: 'Home', item: '/' },
+  { name: generator.categoryName, item: `/${generator.category}/${generator.slug}` },
+  { name: generator.title, item: `/${generator.category}/${generator.slug}` },
+];
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDescription}
+  canonical={canonicalURL}
+  breadcrumbs={breadcrumbs}
+  faqs={generator.faqs}
+  schemaType="WebApplication"
+  currentPath={`/${generator.category}/${generator.slug}`}
+>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb" class="mb-6 flex items-center gap-2 text-xs text-slate-400">
+    <a href="/" class="hover:text-amber-300 transition-colors">Home</a>
+    <span class="text-slate-600">/</span>
+    <span class="capitalize text-slate-400">{generator.categoryName}</span>
+    <span class="text-slate-600">/</span>
+    <span class="text-amber-300 font-medium" aria-current="page">{generator.title}</span>
+  </nav>
+
+  <!-- Page Header & H1 -->
+  <header class="mb-8">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-fantasy text-slate-100 tracking-tight text-balance">
+      {generator.title}
+    </h1>
+    <p class="mt-3 text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed">
+      {generator.heroSubtitle}
+    </p>
+  </header>
+
+  <!-- Interactive Island Component -->
+  <section class="mb-12">
+    <Generator client:load type={generator.type} categoryTitle={generator.title} />
+  </section>
+
+  <!-- CLS-Safe AdSense Banner Slot -->
+  <AdBanner format="horizontal-banner" slotId={`ads-${generator.slug}-top`} />
+
+  <!-- Content Section for AdSense & Depth -->
+  <div class="mt-10 sm:mt-14 space-y-10 sm:space-y-14">
+    <!-- Naming Conventions -->
+    <section class="bg-[#0b0f19] border border-white/10 rounded-2xl p-5 sm:p-8">
+      <h2 class="text-xl sm:text-2xl font-bold font-fantasy text-amber-200 mb-4 tracking-wide">
+        Naming Conventions of {generator.title.replace(' Generator', '')}
+      </h2>
+      <div class="prose prose-invert max-w-full text-base sm:text-lg leading-relaxed space-y-4 text-slate-300">
+        <p>{generator.namingConventions.summary}</p>
+        <p>{generator.namingConventions.phonetics}</p>
+        <p>{generator.namingConventions.surnames}</p>
+      </div>
+    </section>
+
+    <!-- Notable Names & Meanings Table with Horizontal Scroll Safe Container -->
+    <section>
+      <div class="flex items-center justify-between mb-3 sm:mb-4">
+        <h2 class="text-xl sm:text-2xl font-bold font-fantasy text-slate-100 tracking-wide">
+          Examples of Notable Names & Meanings
+        </h2>
+        <span class="text-xs text-slate-400 sm:hidden">
+          Scroll table →
+        </span>
+      </div>
+      <div class="overflow-x-auto rounded-xl border border-white/10 bg-[#0b0f19] shadow-inner -mx-4 sm:mx-0 px-4 sm:px-0">
+        <table class="w-full text-left border-collapse text-sm min-w-[500px]">
+          <thead>
+            <tr class="border-b border-white/10 bg-[#101726] text-xs font-semibold uppercase tracking-wider text-slate-300">
+              <th class="py-3.5 px-4 sm:px-6">Name</th>
+              <th class="py-3.5 px-4 sm:px-6">Origin / Realm</th>
+              <th class="py-3.5 px-4 sm:px-6">Meaning & Significance</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            {generator.notableNames.map((item: any) => (
+              <tr class="hover:bg-white/5 transition-colors">
+                <td class="py-3.5 px-4 sm:px-6 font-semibold text-amber-200 font-fantasy whitespace-nowrap">
+                  {item.name}
+                </td>
+                <td class="py-3.5 px-4 sm:px-6 text-slate-400 whitespace-nowrap">
+                  {item.origin}
+                </td>
+                <td class="py-3.5 px-4 sm:px-6 text-slate-300">
+                  <span class="font-medium text-slate-200">{item.meaning}</span>
+                  <span class="block text-xs text-slate-400 mt-0.5">{item.significance}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions (FAQ Accordion with 48px Touch Targets) -->
+    <section>
+      <h2 class="text-xl sm:text-2xl font-bold font-fantasy text-slate-100 mb-4 sm:mb-6 tracking-wide">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-3 sm:space-y-4">
+        {generator.faqs.map((faq: any) => (
+          <details class="group bg-[#0b0f19] border border-white/10 rounded-xl p-4 sm:p-5 open:border-amber-500/30 transition-all cursor-pointer">
+            <summary class="min-h-[48px] font-semibold text-slate-200 cursor-pointer list-none flex items-center justify-between text-base group-hover:text-amber-200 select-none">
+              <span class="pr-3">{faq.question}</span>
+              <span class="ml-2 text-amber-400 font-mono transition-transform group-open:rotate-180 shrink-0">
+                ↓
+              </span>
+            </summary>
+            <p class="mt-3 text-sm sm:text-base text-slate-400 leading-relaxed border-t border-white/5 pt-3">
+              {faq.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Generators Mesh with 44px+ Touch Targets -->
+    <section class="pt-6 border-t border-white/10">
+      <h3 class="text-lg sm:text-xl font-bold font-fantasy text-slate-200 mb-4 tracking-wide">
+        Explore Related Generators
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        {generator.relatedSlugs.map((related: any) => (
+          <a
+            href={`/${related.category}/${related.slug}`}
+            class="min-h-[64px] p-4 bg-[#0d1320] border border-white/5 rounded-xl hover:border-amber-500/30 hover:bg-[#121a2d] active:scale-[0.98] transition-all group flex flex-col justify-center"
+          >
+            <h4 class="text-sm font-semibold text-slate-200 group-hover:text-amber-300 font-fantasy">
+              {related.title}
+            </h4>
+            <span class="text-xs text-slate-500 mt-1 block">
+              Generate 100,000+ authentic titles →
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

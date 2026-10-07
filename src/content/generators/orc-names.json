@@ -1,0 +1,72 @@
+{
+  "id": "orc-names",
+  "slug": "orc-names",
+  "category": "fantasy-races",
+  "categoryName": "Fantasy Races",
+  "type": "orcs",
+  "title": "Orc Name Generator",
+  "metaTitle": "Orc Name Generator – Fierce Clan, Warchief & Berserker Names",
+  "metaDescription": "Generate savage, resonant Orc and Half-Orc names for RPG campaigns. Choose war titles, guttural roots, and fierce clan epithets for D&D and Warhammer.",
+  "heroSubtitle": "Command savage, guttural monikers forged in the fires of steppe raids, blood rituals, and tribal warlords.",
+  "namingConventions": {
+    "summary": "Orc names are harsh, rhythmic declarations of physical strength, survival, and martial dominance. An orc's name is meant to strike panic into foes before blade meets shield across the dusty plains.",
+    "phonetics": "Orcish phonetics are characterized by aggressive gutturals, harsh stops, and rasping fricatives ('gr', 'kr', 'zg', 'sh', 'throk'). Vowels are blunt and short ('a', 'o', 'u'), deliberately eschewing the ornate diphthongs common in elven tongues.",
+    "surnames": "Orc surnames are earned, not merely inherited. Titles like Skullcrusher, Bloodfang, or Spineshatter commemorate gruesome martial triumphs or monstrous beasts slain during solo rite-of-passage hunts."
+  },
+  "notableNames": [
+    {
+      "name": "Grommash Skullcrusher",
+      "meaning": "Iron Giant who Cleaves Helms",
+      "origin": "Ash-Ridge Bloodclan",
+      "significance": "Paramount chieftain who shattered the imperial cavalry at the Red Gap."
+    },
+    {
+      "name": "Brakka Bloodfang",
+      "meaning": "Fang Bathed in Crimson",
+      "origin": "Dusk-Wolf Raiders",
+      "significance": "Fierce shield-breaker and berserker known for leading vanguard charges on dire wolves."
+    },
+    {
+      "name": "Krug Bonecarver",
+      "meaning": "Artisan of the Fallen Foes",
+      "origin": "Grave-Waste Shamanic Circle",
+      "significance": "Chanter who inscribes spirit totems directly onto dragon rib-cages."
+    },
+    {
+      "name": "Gorga Ironjaw",
+      "meaning": "Unbroken Tusk of the Iron Steppe",
+      "origin": "Crag-Horde Legion",
+      "significance": "Warlord celebrated for breaking siege gates with a monolithic battering ram."
+    },
+    {
+      "name": "Throk Doomhammer",
+      "meaning": "Herald of the Final Ruin",
+      "origin": "Black-Spire Warband",
+      "significance": "Master tactician who united seven disparate splinter clans under one banner."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are these names appropriate for Half-Orc characters?",
+      "answer": "Yes. Half-orcs often blend guttural orc prefixes with human or nomadic naming conventions, making these titles ideal for tragic outcasts, gladiator champions, and gritty mercenary captains."
+    },
+    {
+      "question": "Can orc women hold chieftain titles?",
+      "answer": "In most modern RPG settings, orc society is strictly meritocratic based on martial prowess and spiritual strength. Matriarchs and berserker women frequently command entire war-clans."
+    },
+    {
+      "question": "How do orc epithets work in battle?",
+      "answer": "Warriors chant an opponent's deed-name as a challenge before single combat. Earning a feared epithet is the highest social status an orc warrior can achieve."
+    },
+    {
+      "question": "Can I export all generated names for my campaign notes?",
+      "answer": "Yes! Save your favorites by clicking the star icon, open the Favorites tray in the bottom right, and click 'Export as .TXT' to download a clean text file formatted for your GM binder."
+    }
+  ],
+  "relatedSlugs": [
+    { "slug": "elf-names", "category": "fantasy-races", "title": "Elf Name Generator" },
+    { "slug": "dwarf-names", "category": "fantasy-races", "title": "Dwarf Name Generator" },
+    { "slug": "tavern-names", "category": "locations", "title": "Tavern & Inn Name Generator" },
+    { "slug": "dragon-names", "category": "creatures", "title": "Dragon Name Generator" }
+  ]
+}

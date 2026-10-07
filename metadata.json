@@ -1,0 +1,6 @@
+{
+  "name": "RealmForge – Fantasy & RPG Name Generator",
+  "description": "Lightning-fast programmatic fantasy and RPG name generator. Craft authentic names for elves, dwarves, orcs, taverns, dragons, and realms with rich lore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "tavern-names",
+  "slug": "tavern-names",
+  "category": "locations",
+  "categoryName": "Locations & Havens",
+  "type": "taverns",
+  "title": "Tavern & Inn Name Generator",
+  "metaTitle": "Tavern & Inn Name Generator – Quirky & Atmospheric RPG Alehouse Names",
+  "metaDescription": "Generate memorable fantasy tavern, pub, and inn names for tabletop D&D campaigns. Features classic British pub heraldry, quirky adjectives, and atmospheric lore.",
+  "heroSubtitle": "Roll the dice for bustling roadside inns, shadowy smuggler dives, and cozy dwarven alehouses with rich tavern specialties.",
+  "namingConventions": {
+    "summary": "Fantasy taverns and public houses derive their naming traditions from medieval heraldry, roadside signboards, and local folklore. Because historical patrons were frequently illiterate, tavern signs used bold pictorial pairings like 'The Boar & Flagon' so travelers could recognize the inn from afar.",
+    "phonetics": "Tavern names utilize rhythmic compound phrasing, combining whimsical or menacing adjectives ('Drunken', 'Prancing', 'Rusty', 'Howling') with heraldic beasts, sailing terms, or hearty drink implements ('Dragon', 'Pony', 'Tankard', 'Anchor').",
+    "surnames": "Rather than family surnames, public houses are characterized by their signature house drink, local rumor reputation, and hearth specialties—such as spiced elderberry cider, roasted boar shanks, or bardic storytelling circles."
+  },
+  "notableNames": [
+    {
+      "name": "The Prancing Pony",
+      "meaning": "Bree Roadside Sanctuary",
+      "origin": "Westfold Crossroads",
+      "significance": "Iconic haven for weary travelers, rangers in disguise, and cozy pint-sippers."
+    },
+    {
+      "name": "The Drunken Dragon",
+      "meaning": "Raucous Dwarven Foundry Taproom",
+      "origin": "Iron-Gate District",
+      "significance": "Famed for its copper stills, flame-brewed stout, and nightly arm-wrestling championships."
+    },
+    {
+      "name": "The Salty Sailor",
+      "meaning": "Harbor Wharf Haven",
+      "origin": "Blackwater Bay Docks",
+      "significance": "Smoky watering hole where sea-captains recruit daring crews for uncharted expeditions."
+    },
+    {
+      "name": "The Rusty Tankard",
+      "meaning": "Gritty Back-Alley Cellar",
+      "origin": "Lower Guild Ward",
+      "significance": "Underworld sanctuary where informants trade whispers for silver coin."
+    },
+    {
+      "name": "The Jolly Boar",
+      "meaning": "Highland Game House",
+      "origin": "Pine-Valley Foothills",
+      "significance": "Renowned for its spit-roasted boar and roaring twenty-foot central stone hearth."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do Game Masters use tavern names during a session?",
+      "answer": "A distinct tavern name sets the mood for social encounters. A party arriving at 'The Howling Wolf' immediately expects rugged hunters and mysterious rumors, while 'The Gilded Goblet' suggests aristocratic intrigue."
+    },
+    {
+      "question": "Why do so many fantasy inns use 'The [Adjective] [Noun]' formula?",
+      "answer": "This follows authentic Anglo-Norman pub naming conventions from the 12th to 17th centuries, where carved wooden effigies of animals or symbols were hung outside to represent the inn keeper's guild."
+    },
+    {
+      "question": "Does this generator also create tavern atmosphere and house specials?",
+      "answer": "Yes! Each generated tavern includes a generated ambient atmosphere and house culinary specialty (e.g. 'Spiced Honey Mead & Roasted Boar') to give DMs instant descriptive flavor."
+    },
+    {
+      "question": "Can I copy names with one click?",
+      "answer": "Yes, clicking the copy button on any generated tavern immediately places the full name and flavor onto your clipboard with toast notification confirmation."
+    }
+  ],
+  "relatedSlugs": [
+    { "slug": "elf-names", "category": "fantasy-races", "title": "Elf Name Generator" },
+    { "slug": "dwarf-names", "category": "fantasy-races", "title": "Dwarf Name Generator" },
+    { "slug": "orc-names", "category": "fantasy-races", "title": "Orc Name Generator" },
+    { "slug": "dragon-names", "category": "creatures", "title": "Dragon Name Generator" }
+  ]
+}

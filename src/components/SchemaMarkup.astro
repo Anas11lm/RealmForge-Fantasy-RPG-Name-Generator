@@ -1,0 +1,96 @@
+---
+export interface BreadcrumbItem {
+  name: string;
+  item: string;
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  name?: string;
+  description?: string;
+  url?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  faqs?: FAQItem[];
+  type?: 'WebApplication' | 'WebSite';
+}
+
+const {
+  name = 'RealmForge — Fantasy & RPG Name Generator',
+  description = 'Lightning-fast programmatic fantasy and RPG name generator. Craft authentic names for elves, dwarves, orcs, taverns, dragons, and realms with rich lore.',
+  url = 'https://realmforge.app/',
+  breadcrumbs = [],
+  faqs = [],
+  type = 'WebApplication',
+} = Astro.props;
+
+// 1. WebApplication / WebSite Schema
+const appSchema = {
+  "@context": "https://schema.org",
+  "@type": type,
+  "name": name,
+  "url": url,
+  "description": description,
+  "applicationCategory": "EntertainmentApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "inLanguage": "en-US",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RealmForge",
+    "url": "https://realmforge.app",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://realmforge.app/og-image.png"
+    }
+  }
+};
+
+// 2. BreadcrumbList Schema
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((bc, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": bc.name,
+    "item": bc.item.startsWith('http') ? bc.item : `https://realmforge.app${bc.item.startsWith('/') ? '' : '/'}${bc.item}`,
+  })),
+} : null;
+
+// 3. FAQPage Schema
+const faqSchema = faqs && faqs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer,
+    },
+  })),
+} : null;
+---
+
+<!-- Schema.org WebApplication JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(appSchema)} />
+
+<!-- Schema.org BreadcrumbList JSON-LD -->
+{breadcrumbSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+)}
+
+<!-- Schema.org FAQPage JSON-LD -->
+{faqSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+)}
